@@ -80,7 +80,7 @@ html {
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 700px) {
     .allTopNav.responsive {
-        position: relative;
+        position: fixed;
     }
 
     .allTopNav.responsive a.icon {
@@ -138,11 +138,18 @@ html {
     padding-top: 130px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
 
     .halfCircleLight1,
     .halfCircleLight2 {
         display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .logo1 {
+        width: 80%;
     }
 }
 
@@ -384,12 +391,12 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 200px) {
- .carousel {
-        width:100%;
+/* @media screen and (max-width: 600px) {
+ .carousel img {
+    width: 100%;
     }
     }
-  
+   */
 
 .slowFade {
     display: flex;
@@ -453,6 +460,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 }
 
 
+
 .icons {
     background: #CCBAAA;
     padding-top: 60px;
@@ -478,7 +486,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 
 .footer {
     background: #3F4A44;
-    background-image: url(/Images/PaleGreenCircle.png);
+    background-image: url(./Images/PaleGreenCircle.png);
     background-position: center;
     background-size: cover;
     padding: 40px;
@@ -517,6 +525,10 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 .shopSection {
     padding: 70px;
     background-color: #3F4A44;
+
+    background-image: url(./Images/PaleGreenCircle.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .shopSection h1 {
@@ -637,4 +649,75 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 
 .quickAddButton:hover {
     background-color: #dc9188;
+    cursor: pointer;
 }
+
+
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+/* CONTACT PAGE */
+
+.contactform-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D6C8BC;
+    background-image: url(images/ProductPageBackground.png);
+    background-position: center;
+    background-size: 120px;
+}
+
+form {
+    background: #3F4A44;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 6vw;
+    padding-bottom: 30px;    
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 90%;
+    max-width: 900px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+form h3 {
+    color: #E0D9CF;
+    font-size: 30px;
+    text-align: center;
+}
+
+form input, form textarea {
+    border: 0;
+    padding: 40px;
+    outline: none;
+    background: #D6C8BC;
+    font-size: 10px;
+    font-family: henderson-slab-basic, serif;
+}
+
+form button {
+    padding: 15px;
+    background: #ED5644;
+    color:#E0D9CF;
+    border:0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    font-family: henderson-slab-basic, serif;
+    font-size: 10px;
+    font-weight: 900;
+    
+}
+
+
+  
+  
+  
+  

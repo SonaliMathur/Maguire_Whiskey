@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+
+    <title>Contact Us</title>
 </head>
 <link rel="stylesheet" href="https://use.typekit.net/iix3pnc.css">
 <link rel="stylesheet" href="mystyle.css">
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<title>Maguire Whiskey</title>
+<title>CONTACT US</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,19 +22,21 @@
 <style>
     body {
         font-family: henderson-slab-basic, serif;
+        opacity: 0.4;
+        transition: opacity 3s;
     }
 </style>
 
-<body>
+<body onload="document.body.style.opacity='1'">
 
-     <!--Section 1: Navigation Bar-->
-     <div class="allTopNav" id="myTopnav">
+    <!--Section 1: Navigation Bar-->
+    <div class="allTopNav" id="myTopnav">
 
 
 
         <div class="topnav" id="myTopnav">
             <div class="topnavLogo" id="myTopnavlogo">
-                <a href="index.html" class="logo"><img class="myHomeLogo" src="/Icons/HomeIcon.png" alt="Home Icon"
+                <a href="index.html" class="logo"><img class="myHomeLogo" src="./Icons/HomeIcon.png" alt="Home Icon"
                         style="width:40px;"></a>
             </div>
             <a href="shop.html">SHOP</a>
@@ -47,27 +50,53 @@
 
     </div>
 
-    
-
-
-       <!--Section 12: Footer-->
-       <div class="footer">
-        <p class="questions">HAVE SOME QUESTIONS?</p>
-        <div class="contactButtonContainer">
-            <button class="contactButton" type="button">CONTACT US</button>
-            <p class="rightsReserved">@ 2022 ALL RIGHTS RESERVED</p>
-        </div>
-        <div class="facebookContainer">
-            <img class="facebook" src="/Icons/Facebook.png" alt="Facebook Icon" style="height:20px;" />
-        </div>
-        <div class="instagramContainer">
-            <img class="instagram" src="/Icons/Instagram.png" alt="Instagram Icon" style="height:20px;" />
-        </div>
-        <div class="twitterContainer">
-            <img class="twitter" src="/Icons/Twitter.png" alt="Twitter Icon" style="height:20px;" />
+    <!--Section 2: Title + Some description-->
+    <div class="shopSection">
+        <h1>HAVE SOME QUESTIONS?</h1>
+        <div class="information">
+            <p>No problem! Just fill out the form below and a </p>
+            <p>member of our team will get back to you shortly.</p>
+            <p>This form can verify missing fields for now.</p>
         </div>
     </div>
 
+
+    <!--Section 3: Contact Form-->
+
+    <div class="contactform-container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone No." required>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+
+
+
+    <!--Section 12: Orange Divider-->
+    <div class="divider">
+    </div>
+
+    <!--Section 12: Footer-->
+    <div class="footer">
+        <div class="contactButtonContainer">
+            <p class="rightsReserved">@ 2022 ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="facebookContainer">
+            <img class="facebook" src="./Icons/Facebook.png" alt="Facebook Icon" style="height:20px;" />
+        </div>
+        <div class="instagramContainer">
+            <img class="instagram" src="./Icons/Instagram.png" alt="Instagram Icon" style="height:20px;" />
+        </div>
+        <div class="twitterContainer">
+            <img class="twitter" src="./Icons/Twitter.png" alt="Twitter Icon" style="height:20px;" />
+        </div>
+    </div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
