@@ -20,12 +20,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    body {
+    body  {
         font-family: henderson-slab-basic, serif;
+        opacity: 0.4;
+        transition: opacity 3s;
     }
+
+
 </style>
 
-<body>
+<body onload="document.body.style.opacity='1'">
 
     <!--Section 1: Navigation Bar-->
     <div class="allTopNav" id="myTopnav">
@@ -34,7 +38,7 @@
 
         <div class="topnav" id="myTopnav">
             <div class="topnavLogo" id="myTopnavlogo">
-                <a href="index.html" class="logo"><img class="myHomeLogo" src="/Icons/HomeIcon.png" alt="Home Icon"
+                <a href="index.html" class="logo"><img class="myHomeLogo" src="./Icons/HomeIcon.png" alt="Home Icon"
                         style="width:40px;"></a>
             </div>
             <a href="shop.html">SHOP</a>
@@ -69,52 +73,101 @@
         </select>
     </div> -->
 
-<div class="categories">
-
-    <div class="row">
-        <div class="column">
-            <img src="/Products/ItemA.png" alt="cocktail image" style="width:100%"">
-            <div class="divider2">
+    <div class="categories">
+        <div class="row">
+            <div class="column">
+                <img src="./Products/ItemA.png" alt="cocktail image" style="width:100%"">
+            <div class=" divider2">
             </div>
-            <h2>NEGRONI</h2>
-            <p class="info">one part gin, one part vermouth rosso </p>
-                <p class="info">and one part Campari, garnished with orange peel.</p>
+            <h2>NEGRONI KIT</h2>
             <p class="price">€25.50</p>
+            <div class="information2">
+                <p class="info">gin, vermouth rosso, </p>
+                <p class="info">and one part Campari, with an orange peel</p>
+            </div>
+            <div class="quickButton">
+                <button onclick="buttonColour()" id="btn" class="quickAddButton" type="button">+ QUICK ADD</button>
+            </div>
         </div>
 
         <div class="column">
-            <img src="/Products/ItemB.png" alt="cocktail image" style="width:100%"">
-            <h2>Cocktail 1</h2>
-            <p class="price">price</p>
+            <img src="./Products/ItemB.png" alt="cocktail image" style="width:100%"">
+            <div class=" divider2">
+            </div>
+            <h2>THE 1829 KIT</h2>
+            <p class="price">€25.50</p>
+            <div class="information2">
+                <p class="info">whiskey, sweet vermouth </p>
+                <p class="info">maraschino liqueuri, with orange juice</p>
+            </div>
+            <div class="quickButton">
+                <button class="quickAddButton" type="button">+ QUICK ADD</button>
+            </div>
         </div>
 
-        <div class="column">
-            <img src="/Products/ItemC.png" alt="cocktail image" style="width:100%"">
-            <h2>Cocktail 1</h2>
-            <p class="price">price</p>
+    <div class="column">
+        <img src="./Products/ItemC.png" alt="cocktail image" style="width:100%"">
+        <div class=" divider2">
+        </div>
+        <h2>NEGRONI KIT</h2>
+        <p class="price">€25.50</p>
+        <div class="information2">
+            <p class="info">gin, vermouth rosso, </p>
+            <p class="info">and one part Campari, with an orange peel</p>
+        </div>
+        <div class="quickButton">
+            <button class="quickAddButton" type="button">+ QUICK ADD</button>
         </div>
     </div>
 
     <div class="row">
         <div class="column">
-            <img src="/Products/ItemD.png" alt="cocktail image" style="width:100%"">
-            <h2>Cocktail 1</h2>
-            <p class="price">price</p>
+            <img src="./Products/ItemD.png" alt="cocktail image" style="width:100%"">
+            <div class=" divider2">
+            </div>
+            <h2>NEGRONI KIT</h2>
+            <p class="price">€25.50</p>
+            <div class="information2">
+                <p class="info">gin, vermouth rosso, </p>
+                <p class="info">and one part Campari, with an orange peel</p>
+            </div>
+            <div class="quickButton">
+                <button class="quickAddButton" type="button">+ QUICK ADD</button>
+            </div>
         </div>
-        <div class="column">
-            <img src="/Products/ItemE.png" alt="cocktail image" style="width:100%"">
-            <h2>Cocktail 1</h2>
-            <p class="price">price</p>
+
+    <div class="column">
+        <img src="./Products/ItemE.png" alt="cocktail image" style="width:100%"">
+        <div class=" divider2">
         </div>
-        <div class="column">
-            <img src="/Products/ItemF.png" alt="cocktail image" style="width:100%"">
-            <h2>Cocktail 1</h2>
-            <p class="price" >price</p>
+        <h2>NEGRONI KIT</h2>
+        <p class="price">€25.50</p>
+        <div class="information2">
+            <p class="info">gin, vermouth rosso, </p>
+            <p class="info">and one part Campari, with an orange peel</p>
+        </div>
+        <div class="quickButton">
+            <button class="quickAddButton" type="button">+ QUICK ADD</button>
+        </div>
+    </div>
+
+    <div class="column">
+        <img src="./Products/ItemF.png" alt="cocktail image" style="width:100%"">
+        <div class=" divider2">
+        </div>
+        <h2>NEGRONI KIT</h2>
+        <p class="price">€25.50</p>
+        <div class="information2">
+            <p class="info">gin, vermouth rosso, </p>
+            <p class="info">and one part Campari, with an orange peel</p>
+        </div>
+        <div class="quickButton">
+            <button class="quickAddButton" type="button">+ QUICK ADD</button>
         </div>
     </div>
 
 
-</div>
+    </div>
 
 
 

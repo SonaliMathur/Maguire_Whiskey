@@ -6,6 +6,7 @@ html {
     /*Prevent horizontal scrolling*/
 }
 
+
 .content {
     display: flex;
 }
@@ -109,19 +110,27 @@ html {
 .header {
     text-align: center;
     background: #E0D9CF;
+    height: 800px;
+}
+
+.container {
+    background-color: #D6C8BC;
+    height: 100vh;
     padding-bottom: 30px;
+    
 }
 
 .logo1 {
     padding-bottom: 0px;
     padding-top: 130px;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    text-align: center;
 }
 
 .halfCircleLight1 {
     float: left;
     padding-top: 130px;
+    
 }
 
 .halfCircleLight2 {
@@ -137,17 +146,18 @@ html {
     }
 }
 
+
 .containerText {
-    background: #E0D9CF;
     margin-top: 0;
-    padding-top: 10px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 100px;
     font-family: henderson-slab-basic, serif;
     font-weight: 900;
     font-style: normal;
     font-size: small;
     color: #3F4A44;
     text-align: center;
+    
 }
 
 /*Section 5*/
@@ -374,6 +384,13 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 200px) {
+ .carousel {
+        width:100%;
+    }
+    }
+  
+
 .slowFade {
     display: flex;
     align-items: flex-start;
@@ -524,6 +541,9 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 
 .categories {
     background-color: #D6C8BC;
+    background-image: url(images/ProductPageBackground.png);
+    background-position: center;
+    background-size: 120px;
 }
 
 * {
@@ -535,6 +555,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     width: 33.33%;
     padding: 5px;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .column img {
@@ -555,13 +576,18 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     }
 }
 
+.information2 {
+    float: left;
+}
 .info {
 
     color: #3F4A44;
     font-size: 13px;
     font-style: italic;
-    text-align: center;
+    float: left;
     padding-top: 5px;
+
+    
 }
 
 .price {
@@ -570,7 +596,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     font-weight: 900;
     font-style: normal;
     color: #3F4A44;
-    text-align: center;
+    float: right;
     padding-top: 5px;
 }
 
@@ -578,12 +604,37 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 
     color: #3F4A44;
     font-size: 18px;
-    text-align: center;
+    float: left;
     font-weight: 900;
     padding-top: 5px;
 }
 
+ 
 .divider2 {
     background: #3F4A44;
     padding: 2px;
+}
+
+.quickButton {
+    float: right;
+    position: relative;
+}
+
+.quickAddButton {
+    background-color: #D37267;
+    border: none;
+    border-radius: 12px;
+    color: #E0D9CF;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: henderson-slab-basic, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 9px;
+}
+
+
+.quickAddButton:hover {
+    background-color: #dc9188;
 }
