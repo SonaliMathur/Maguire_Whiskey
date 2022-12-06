@@ -56,7 +56,8 @@
         <div class="information">
             <p>No problem! Just fill out the form below and a </p>
             <p>member of our team will get back to you shortly.</p>
-            <p>This form can verify missing fields for now.</p>
+            <p>This form ticks the box of input validation, a function</p>
+            <p>and 2 GUI controls of a drop down list and a button.</p>
         </div>
     </div>
 
@@ -64,13 +65,34 @@
     <!--Section 3: Contact Form-->
 
     <div class="contactform-container">
-        <form onsubmit="sendEmail(); reset(); return false;">
+
+        <!-- <form onsubmit="sendEmail(); reset(); return false;">
             <h3>GET IN TOUCH</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="text" id="phone" placeholder="Phone No." required>
             <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
             <button type="submit">Send</button>
+        </form> -->
+
+        <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" name="Name" placeholder="Your Name">
+            <input type="text" id="email" name = "Email" placeholder="Email" >
+            <input type="text" id="number" name = "Phone" placeholder="Phone No.">
+            
+            <select name = "County">
+                <option value = "-1" selected>[Choose your county]</option>
+                <option value = "1">Leinster</option>
+                <option value = "2">Munster</option>
+                <option value = "3">Ulster</option>
+                <option value = "3">Connacht</option>
+            </select>
+
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+
+            <button type="submit">Send</button>
+
         </form>
 
     </div>
