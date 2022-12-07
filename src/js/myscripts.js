@@ -10,38 +10,11 @@ function myNavFunction() {
     }
 }
 
-
-//sorry, done very inefficiently but I couldn't figure it out...
-//I'll count it as one Event Handler (1) for onclick since they are all the same
-function tick() {
-    document.getElementById("button").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button").value = "+ QUICK ADD"), 2000);
+//Event Handler (1)
+function tick(id) {
+    document.getElementById(`button_${id}`).value = "ITEM ADDED";
+    setTimeout(() => (document.getElementById(`button_${id}`).value = "+ QUICK ADD"), 2000);
 }
-
-function tick2() {
-    document.getElementById("button2").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button2").value = "+ QUICK ADD"), 2000);
-}
-
-function tick3() {
-    document.getElementById("button3").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button3").value = "+ QUICK ADD"), 2000);
-}
-function tick4() {
-    document.getElementById("button4").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button4").value = "+ QUICK ADD"), 2000);
-}
-
-function tick5() {
-    document.getElementById("button5").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button5").value = "+ QUICK ADD"), 2000);
-}
-
-function tick6() {
-    document.getElementById("button6").value = "ITEM ADDED";
-    setTimeout(() => (document.getElementById("button6").value = "+ QUICK ADD"), 2000);
-}
-
 
 
 
@@ -116,73 +89,6 @@ function tickA() {
     setTimeout(() => (document.getElementById("addButton").value = "ADD TO CART"), 2000);
 }
 
-// Display products logic
-
-const products = {
-    1: {
-        name: 'Negroni Kit',
-        price: 25.5,
-        img_src: 'Products/ItemA.png',
-        description: "Description 1"
-    },
-    2: {
-        name: 'The 1829 Kit',
-        price: 25.5,
-        img_src: 'Products/ItemB.png',
-        description: "Description 2"
-    },
-    3: {
-        name: 'Negroni Kit',
-        price: 25.5,
-        img_src: 'Products/ItemC.png',
-        description: "Description 3"
-    },
-    4: {
-        name: 'Negroni Kit',
-        price: 25.5,
-        img_src: 'Products/ItemD.png',
-        description: "Description 4"
-    },
-    5: {
-        name: 'Negroni Kit',
-        price: 25.5,
-        img_src: 'Products/ItemE.png',
-        description: "Description 5"
-    },
-    6: {
-        name: 'Negroni Kit',
-        price: 25.5,
-        img_src: 'Products/ItemF.png',
-        description: "Description 6"
-    }
-}
-
-// https://www.tutorialspoint.com/How-do-I-call-a-JavaScript-function-on-page-load
-// https://stackoverflow.com/questions/71415643/foreach-method-in-javascript-for-key-value-pairs
-function displayProducts() {
-    var product_div = document.getElementById('products')
-    product_div.innerHTML = "";
-    products.forEach(function (key) {
-        product_div.innerHTML +=
-        `
-        <div class="column">
-            <a href="negroniKit.html"><img src="${key.img_src}" alt="cocktail image" style="width:100%""></a>
-            <div class=" divider2">
-            </div>
-            <h2>${key.name}</h2>
-            <p class="price">${key.price}</p>
-            <div class="information2">
-                <p class="info">${key.description}</p>
-            </div>
-            <div class="quickButton">
-                <input id="button" class="quickAddButton" type="button" value="+ QUICK ADD" onclick="${ShoppingCart.addToCart(key)}">
-            </div>
-        </div>
-        `
-    })
-    console.log(product_div.innerHTML)
-}
-
 // Shopping Cart logic
 class ShoppingCart {
     constructor() {
@@ -200,8 +106,4 @@ class ShoppingCart {
     getItems() {
         return this.items;
     }
-}
-
-let items = {
-
 }

@@ -27,7 +27,7 @@
     }
 </style>
 
-<body onload="document.body.style.opacity='1'">
+<body onload="document.body.style.opacity='1', displayProducts()">
 
     <!--Section 1: Navigation Bar-->
     <div class="allTopNav" id="myTopnav">
@@ -62,8 +62,10 @@
 
 
     <!-- Start of categories div -->
-    <div class="categories" onload="displayProducts()">
-        <div class="products">
+    <div class="categories">
+        
+        <div id="products" >
+            
 
         </div>
         
@@ -96,6 +98,7 @@
         </div>
     </div>
     <script src="../js/myscripts.js"></script>
+    <script src="../js/products.js"></script>
 </body>
 
 </html>
