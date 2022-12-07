@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cocktails</title>
+    <link rel="icon" type="image/x-icon" href="./Icons/HomeIcon.png">
 </head>
 <link rel="stylesheet" href="https://use.typekit.net/iix3pnc.css">
 <link rel="stylesheet" href="mystyle.css">
@@ -20,13 +21,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    body  {
+    body {
         font-family: henderson-slab-basic, serif;
         opacity: 0.4;
         transition: opacity 3s;
     }
-
-
 </style>
 
 <body onload="document.body.style.opacity='1'">
@@ -61,22 +60,13 @@
         </div>
     </div>
 
-    <!--Section 14: Main Bulk of Items-->
-    <!-- 
-    <div class="row row-2">
-        <h2>ALL PRODUCTS</h2>
-        <select>
-            <option>Default Sorting</option>
-            <option>Sort By Price</option>
-            <option>Sort By Popularity</option>
-            <option>Sort By Rating</option>
-        </select>
-    </div> -->
+
+
 
     <div class="categories">
         <div class="row">
             <div class="column">
-                <img src="./Products/ItemA.png" alt="cocktail image" style="width:100%"">
+                <a href="negroniKit.html"><img src="./Products/ItemA.png" alt="cocktail image" style="width:100%""></a>
             <div class=" divider2">
             </div>
             <h2>NEGRONI KIT</h2>
@@ -86,59 +76,48 @@
                 <p class="info">and one part Campari, with an orange peel</p>
             </div>
             <div class="quickButton">
-                <input id ="button" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick()">
+                <input id="button" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick()">
             </div>
         </div>
 
         <div class="column">
             <img src="./Products/ItemB.png" alt="cocktail image" style="width:100%"">
             <div class=" divider2">
-            </div>
-            <h2>THE 1829 KIT</h2>
-            <p class="price">€25.50</p>
-            <div class="information2">
-                <p class="info">whiskey, sweet vermouth </p>
-                <p class="info">maraschino liqueuri, with orange juice</p>
-            </div>
-            <div class="quickButton">
-                <input id ="button2" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick2()">
-            </div>
         </div>
+        <h2>THE 1829 KIT</h2>
+        <p class="price">€25.50</p>
+        <div class="information2">
+            <p class="info">whiskey, sweet vermouth </p>
+            <p class="info">maraschino liqueuri, with orange juice</p>
+        </div>
+        <div class="quickButton">
+            <input id="button2" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick2()">
+        </div>
+    </div>
+
+
 
     <div class="column">
         <img src="./Products/ItemC.png" alt="cocktail image" style="width:100%"">
         <div class=" divider2">
-        </div>
-        <h2>NEGRONI KIT</h2>
-        <p class="price">€25.50</p>
-        <div class="information2">
-            <p class="info">gin, vermouth rosso, </p>
-            <p class="info">and one part Campari, with an orange peel</p>
-        </div>
-        <div class="quickButton">
-            <input id ="button3" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick3()">
-        </div>
     </div>
+    <h2>NEGRONI KIT</h2>
+    <p class="price">€25.50</p>
+    <div class="information2">
+        <p class="info">gin, vermouth rosso, </p>
+        <p class="info">and one part Campari, with an orange peel</p>
+    </div>
+    <div class="quickButton">
+        <input id="button3" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick3()">
+    </div>
+    </div>
+
+
 
     <div class="row">
         <div class="column">
             <img src="./Products/ItemD.png" alt="cocktail image" style="width:100%"">
             <div class=" divider2">
-            </div>
-            <h2>NEGRONI KIT</h2>
-            <p class="price">€25.50</p>
-            <div class="information2">
-                <p class="info">gin, vermouth rosso, </p>
-                <p class="info">and one part Campari, with an orange peel</p>
-            </div>
-            <div class="quickButton">
-                <input id ="button4" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick4()">
-            </div>
-        </div>
-
-    <div class="column">
-        <img src="./Products/ItemE.png" alt="cocktail image" style="width:100%"">
-        <div class=" divider2">
         </div>
         <h2>NEGRONI KIT</h2>
         <p class="price">€25.50</p>
@@ -147,23 +126,38 @@
             <p class="info">and one part Campari, with an orange peel</p>
         </div>
         <div class="quickButton">
-            <input id ="button5" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick5()">
+            <input id="button4" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick4()">
         </div>
+    </div>
+
+    <div class="column">
+        <img src="./Products/ItemE.png" alt="cocktail image" style="width:100%"">
+        <div class=" divider2">
+    </div>
+    <h2>NEGRONI KIT</h2>
+    <p class="price">€25.50</p>
+    <div class="information2">
+        <p class="info">gin, vermouth rosso, </p>
+        <p class="info">and one part Campari, with an orange peel</p>
+    </div>
+    <div class="quickButton">
+        <input id="button5" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick5()">
+    </div>
     </div>
 
     <div class="column">
         <img src="./Products/ItemF.png" alt="cocktail image" style="width:100%"">
         <div class=" divider2">
-        </div>
-        <h2>NEGRONI KIT</h2>
-        <p class="price">€25.50</p>
-        <div class="information2">
-            <p class="info">gin, vermouth rosso, </p>
-            <p class="info">and one part Campari, with an orange peel</p>
-        </div>
-        <div class="quickButton">
-            <input id ="button6" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick6()">
-        </div>
+    </div>
+    <h2>NEGRONI KIT</h2>
+    <p class="price">€25.50</p>
+    <div class="information2">
+        <p class="info">gin, vermouth rosso, </p>
+        <p class="info">and one part Campari, with an orange peel</p>
+    </div>
+    <div class="quickButton">
+        <input id="button6" class="quickAddButton" type="button" value="+ QUICK ADD" onclick=" tick6()">
+    </div>
     </div>
     </div>
 
@@ -176,20 +170,22 @@
     <div class="footer">
         <p class="questions">HAVE SOME QUESTIONS?</p>
         <div class="contactButtonContainer">
-            <button class="contactButton" type="button">CONTACT US</button>
+            <a href="contact.html"><button class="contactButton" type="button">CONTACT US</button></a>
             <p class="rightsReserved">@ 2022 ALL RIGHTS RESERVED</p>
         </div>
         <div class="facebookContainer">
-            <img class="facebook" src="./Icons/Facebook.png" alt="Facebook Icon" style="height:20px;" />
+            <a href="https://www.facebook.com/"><img class="facebook" src="./Icons/Facebook.png" alt="Facebook Icon"
+                    style="height:20px;" /></a>
         </div>
         <div class="instagramContainer">
-            <img class="instagram" src="./Icons/Instagram.png" alt="Instagram Icon" style="height:20px;" />
+            <a href="https://www.instagram.com/"><img class="instagram" src="./Icons/Instagram.png" alt="Instagram Icon"
+                    style="height:20px;" /></a>
         </div>
         <div class="twitterContainer">
-            <img class="twitter" src="./Icons/Twitter.png" alt="Twitter Icon" style="height:20px;" />
+            <a href="https://twitter.com/"><img class="twitter" src="./Icons/Twitter.png" alt="Twitter Icon"
+                    style="height:20px;" /></a>
         </div>
     </div>
-
 </body>
 
 </html>

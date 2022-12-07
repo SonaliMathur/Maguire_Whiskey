@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us</title>
-    <link rel="icon" type="image/x-icon" href="./Icons/HomeIcon.png"> <!--NEEDS CHANGING-->
+    <title>Cocktails</title>
+    <link rel="icon" type="image/x-icon" href="./Icons/HomeIcon.png">
 </head>
 <link rel="stylesheet" href="https://use.typekit.net/iix3pnc.css">
 <link rel="stylesheet" href="mystyle.css">
 <script src="myscripts.js"></script>
+<script src="arrays.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<title>CONTACT US</title>
+<title>Maguire Whiskey</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-    body {
+    body  {
         font-family: henderson-slab-basic, serif;
         opacity: 0.4;
         transition: opacity 3s;
     }
+
+
 </style>
 
 <body onload="document.body.style.opacity='1'">
@@ -51,47 +54,61 @@
 
     </div>
 
-    <!--Section 2: Title + Some description-->
+    <!--Section 13: Title + Some description-->
     <div class="shopSection">
-        <h1>HAVE SOME QUESTIONS?</h1>
+        <h1>NEGRONI KIT</h1>
         <div class="information">
-            <p>No problem! Just fill out the form below and a </p>
-            <p>member of our team will get back to you shortly.</p>
-            <p>This form ticks the box of input validation, a function</p>
-            <p>and 2 GUI controls of a drop down list and a button.</p>
+            <p>A Gin, vermouth and Campari make this sophisticated yet simple Italian classic.</p>
+            <p>Pairing sweet and bitter notes with a hint of orange. 21% ABV.</p>
+            <p>The recipe button below fulfills the Javascript brief of an array.</p>
         </div>
     </div>
 
 
-    <!--Section 3: Contact Form-->
 
-    <div class="contactform-container">
-
-    
-
-        <form action = "formsubmitted.html" name = "myForm" onsubmit = "return(validate());">
-            <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" name="Name" placeholder="Your Name">
-            <input type="text" id="email" name = "Email" placeholder="Email" >
-            <input type="text" id="number" name = "Phone" placeholder="Phone No.">
-            
-            <select name = "County">
-                <option value = "-1" selected>[Choose your province]</option>
-                <option value = "1">Leinster</option>
-                <option value = "2">Munster</option>
-                <option value = "3">Ulster</option>
-                <option value = "3">Connacht</option>
-            </select>
-
-            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-
-            <button type="submit">Send</button>
-
-        </form>
-
+    <div class="categories">
+        <div class="goBack"><a href="shop.html"><img src="./Icons/backIcon.png" alt="back button" style="width:50px"></div></a>
+        <div class="row">
+            <div class="kits">
+                <img src="./Products/ItemA.png" alt="cocktail image">
+            </div>
+            <p class="kitPrice">€25.50</p>
+            <div class="theAddButton">
+                <input id ="addButton" class="addButton" type="button" value="ADD TO CART" onclick=" tickA()">
+            </div>
+        </div>
     </div>
 
 
+
+    <div class="allergens">
+        <div class="allergenContainer">
+            <img class=allergyIcon src="./Icons/SulphitesIcon.png" alt="Allergy Icon" style="height:70px;" />
+            <p class="allergyText">May contain suphites</p>
+        </div>
+
+
+    </div>
+
+    <div class="recipeButtonDesign">
+        <input type="button" class="recipeButton" onclick="insertRecipe()" value="VIEW RECIPE" />
+    </div>
+    <!--Table-->
+    <div class="tableDesign">
+        <table id="myTable" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Drink</th>
+                    <th>Amount</th>
+
+                </tr>
+            </thead>
+            <tbody id="drinkData">
+
+            </tbody>
+        </table>
+    </div>
+        
 
     <!--Section 12: Orange Divider-->
     <div class="divider">
@@ -99,7 +116,9 @@
 
     <!--Section 12: Footer-->
     <div class="footer">
+        <p class="questions">HAVE SOME QUESTIONS?</p>
         <div class="contactButtonContainer">
+            <a href="contact.html"><button class="contactButton" type="button">CONTACT US</button></a>
             <p class="rightsReserved">@ 2022 ALL RIGHTS RESERVED</p>
         </div>
         <div class="facebookContainer">
@@ -112,7 +131,6 @@
             <a href="https://twitter.com/"><img class="twitter" src="./Icons/Twitter.png" alt="Twitter Icon" style="height:20px;" /></a>
         </div>
     </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
