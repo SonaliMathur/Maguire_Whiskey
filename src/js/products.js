@@ -1,5 +1,5 @@
 // Display products logic
-
+//https://stackoverflow.com/questions/65237381/trying-to-filter-an-array-of-products-with-an-array-of-filters-upon-click
 const products = [
     {
         id: 1,
@@ -7,7 +7,8 @@ const products = [
         price: 25.99,
         img_src: '../../Products/ItemA.png',
         descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        reference: "./negroniKit.html"
+        // descriptionTwo: "Fortnite battle pass"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const products = [
         price: 25.99,
         img_src: '../../Products/ItemB.png',
         descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        reference: "../negroniKit.html",
+        // descriptionTwo: "Fortnite battle pass"
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ const products = [
         price: 25.99,
         img_src: '../../Products/ItemC.png',
         descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        reference: "../negroniKit.html",
+        // descriptionTwo: "Fortnite battle pass"
     },
     {
         id: 4,
@@ -31,7 +34,8 @@ const products = [
         price: 25.99,
         img_src: '../../Products/ItemD.png',
         descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        reference: "../negroniKit.html",
+        // descriptionTwo: "Fortnite battle pass"
     },
     {
         id: 5,
@@ -39,15 +43,16 @@ const products = [
         price: 25.99,
         img_src: '../../Products/ItemE.png',
         descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        // descriptionTwo: "Fortnite battle pass"
     },
     {
         id: 6,
         name: 'Negroni Kit',
         price: 25.99,
         img_src: '../../Products/ItemF.png',
-        descriptionOne: "gin, vermouth, shit in my ass",
-        descriptionTwo: "Fortnite battle pass"
+        descriptionOne: "gin, vermouth, shit in my ass", 
+        reference: "../negroniKit.html",
+        // descriptionTwo: "Fortnite battle pass"
     }
 ]
 
@@ -61,14 +66,15 @@ function displayProducts() {
         if (productCount <= 2) {
             row += `
             <div class="column">
-                <a href="negroniKit.html"><img src="${x.img_src}" alt="cocktail image" style="width:100%""></a>
+                <a href="${x.reference}"><img src="${x.img_src}" alt="cocktail image" style="width:100%""></a>
                 <div class=" divider2">
                 </div>
                 <h2>${x.name}</h2>
                 <p class="price">€${x.price}</p>
                 <div class="information2">
                     <p class="info">${x.descriptionOne}</p>
-                    <p class="info">${x.descriptionTwo}</p>
+                   
+            
                 </div>
                 <div class="quickButton">
                     <input id="button_${x.id}" class="quickAddButton" type="button" value="+ QUICK ADD" onclick="tick(${x.id})">
@@ -81,14 +87,14 @@ function displayProducts() {
         } else {
             row += `
             <div class="column">
-                <a href="negroniKit.html"><img src="${x.img_src}" alt="cocktail image" style="width:100%""></a>
+            <a href="${x.reference}"><img src="${x.img_src}" alt="cocktail image" style="width:100%""></a>
                 <div class=" divider2">
                 </div>
                 <h2>${x.name}</h2>
                 <p class="price">€${x.price}</p>
                 <div class="information2">
                     <p class="info">${x.descriptionOne}</p>
-                    <p class="info">${x.descriptionTwo}</p>
+                   
                 </div>
                 <div class="quickButton">
                     <input id="button_${x.id}" class="quickAddButton" type="button" value="+ QUICK ADD" onclick="tick(${x.id})">

@@ -543,7 +543,18 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     background-image: url(../../Images/ProductPageBackground.png);
     background-position: center;
     background-size: 120px;
+    font-size: 50px;
+    /* padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px; */
+    padding: 30px 30px 30px 30px;
 }
+
+.categories img {
+    border-radius: 15px;
+}
+
 
 * {
     box-sizing: border-box;
@@ -561,6 +572,13 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     padding-bottom: 5px;
 }
 
+#products h2 {
+    font-size: 25px;
+    padding-bottom: -30px;
+    top: -20px;
+}
+
+
 /* Clearfix (clear floats) */
 .row::after {
     content: "";
@@ -569,15 +587,25 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .column {
         width: 100%;
+        text-align: center;
     }
 }
 
 .information2 {
     float: left;
+    text-align: left;
 }
+
+@media screen and (max-width: 800px) {
+    .information2 {
+        float: left;
+        padding:10px
+    }
+}
+
 
 .info {
 
@@ -585,7 +613,10 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     font-size: 13px;
     font-style: italic;
     float: left;
-    padding-top: 5px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: -20px;
+    /* padding-top: 3px; */
 
 
 }
@@ -597,7 +628,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     font-style: normal;
     color: #3F4A44;
     float: right;
-    padding-top: 5px;
+    padding-top: 20px;
 }
 
 .row h2 {
@@ -613,11 +644,15 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
 .divider2 {
     background: #3F4A44;
     padding: 2px;
+    margin-bottom: -20px;
+    margin-top: -10px;
 }
+
 
 .quickButton {
     float: right;
     position: relative;
+    top: 0px;
 }
 
 .quickAddButton, .recipeButton {
@@ -631,7 +666,7 @@ to this blog for the image slideshow, I just changed the timings, the degrees an
     font-family: henderson-slab-basic, serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 9px;
+    font-size: 13px;
 }
 
 
@@ -668,8 +703,8 @@ form {
     padding-left: 50px;
     padding-right: 50px;
     width: 90%;
-    max-width: 900px;
-    height: 550px;
+    max-width: 700px;
+    height: 470px;
     border-radius: 10px;
 }
 
