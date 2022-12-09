@@ -80,6 +80,7 @@ function displayProducts() {
                     <input id="button_${x.id}" class="quickAddButton" type="button" value="+ QUICK ADD" onclick="tick(${x.id})">
                 </div>
             </div>
+
             
             `
             productCount++;
@@ -111,6 +112,111 @@ function displayProducts() {
     
     
 }
+
+
+
+
+
+function addToCart(productId) {
+    // Find the product by its id in the product array
+    const product = products.find(product => product.id === productId);
+
+    // If the product was found, add it to the shopping cart stored in local storage
+    if (product) {
+        // Get the current shopping cart from local storage
+        let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
+        // Add the product to the shopping cart
+        shoppingCart.push(product);
+
+        // Save the updated shopping cart to local storage
+        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+    }
+}
+
+// Function to get the total price of all products in the shopping cart
+function getTotal() {
+    // Get the shopping cart from local storage
+    const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+
+    // Reduce the shopping cart array to the sum of all prices
+    const total = shoppingCart.reduce((acc, products) => acc + products.price, 0);
+
+    // Return the total price
+    return total;
+}
+
+// Example usage:
+
+// Add a product to the shopping cart
+addToCart(2);
+
+// Get the total price of all products in the shopping cart
+const total = getTotal();
+
+
+const addToCartButton = document.getElementsByClassName('quickButton');
+
+// Add an event listener to the button that calls the addToCart function when the button is clicked
+addToCartButton.onclick = () => {
+    // Call the addToCart function and pass it the product id
+    addToCart(2);
+};
+
+
+function goToCart() {
+    // Redirect the user to the cart page
+    window.location.href = './shoppingCart.html';
+}
+
+// // Function to display the contents of the shopping cart on the cart page
+// function displayCart() {
+//     // Get the shopping cart from local storage
+//     const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+// }
+
+    // // Get the element where the cart items will be displayed
+    // const cartListElement = document.getElementById('cart-list');
+
+    // // Loop through the shopping cart array and create a list item for each product
+    // for (const product of shoppingCart) {
+    //     // Create a new list item element
+    //     const listItem = document.createElement('li');
+
+    //     // Set the text content of the list item to the product name and price
+    //     listItem.textContent = `${product.name}: $${product.price}`;
+    // }
+
+//         // Add the list item to the cart list
+//         cartListElement.appendChild(listItem);
+//     }
+
+//     // Get the total price element
+//     const totalPriceElement = document.getElementById('total-price');
+
+//     // Set the text content of the total price element to the total price of the products in the cart
+//     totalPriceElement.textContent = `Total: $${getTotal()}`;
+// }
+
+// Example usage:
+
+// Add a product to the shopping cart
+// addToCart(2);
+
+// // When the user clicks the "Go to cart" button, redirect them to the cart page
+// const goToCartButton = document.getElementById('go-to-cart-button');
+// goToCartButton.addEventListener('click', goToCart);
+
+// // When the cart page loads, display the contents of the shopping cart
+// window.addEventListener('load', displayCart);
+
+
+
+
+
+
+
+
 
 var negroniDrinkArray = [
     { drink: "Campari", amount: 1 + "oz" },
