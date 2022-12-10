@@ -27,7 +27,7 @@
     }
 </style>
 
-<body>
+<body onload="displayCartItems()">
 
     <!--Section 1: Navigation Bar-->
     <div class="allTopNav" id="myTopnav">
@@ -40,6 +40,7 @@
             <a href="shop.html">SHOP</a>
             <a href="contact.html">CONTACT</a>
             <a href="shoppingCart.html">CART</a>
+            <div id="empty-cart-button"></div>
 
             <a href="javascript:void(0);" class="icon" onclick="myNavFunction()">
                 <i class="fa fa-bars"></i>
@@ -48,18 +49,21 @@
 
     </div>
 
-
-
-    <div id="cart-items" class="container">
-
+    <div class="categories2">
+        <div id="cart-items">
+        </div>
     </div>
 
-    <div class="divider" id="divider">
+    <div class="checkoutButtonContainer">
+        <button class="checkoutButton" type="button">CHECKOUT</button>
+    </div>
 
+    <div class="divider">
+        
     </div>
 
     <!--Section 12: Footer-->
-    <div class="footer">
+    <footer class="footer">
         <p class="questions">HAVE SOME QUESTIONS?</p>
         <div class="contactButtonContainer">
             <a href="contact.html"><button class="contactButton" type="button">CONTACT US</button></a>
@@ -77,7 +81,7 @@
             <a href="https://twitter.com/"><img class="twitter" src="../../Icons/Twitter.png" alt="Twitter Icon"
                     style="height:20px;" /></a>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
