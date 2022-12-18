@@ -25,6 +25,7 @@
         font-family: henderson-slab-basic, serif;
         opacity: 0.4;
         transition: opacity 3s;
+        background-color: #3F4A44;
     }
 </style>
 
@@ -37,13 +38,14 @@
 
         <div class="topnav" id="myTopnav">
             <div class="topnavLogo" id="myTopnavlogo">
-                <a href="index.html" class="logo"><img class="myHomeLogo" src="../../Icons/HomeIcon.png" alt="Home Icon"
+                <a href="home.html" class="logo"><img class="myHomeLogo" src="../../Icons/HomeIcon.png" alt="Home Icon"
                         style="width:40px;"></a>
             </div>
+            <a href="about.html">ABOUT</a>
             <a href="shop.html">SHOP</a>
             <a href="contact.html">CONTACT</a>
             <a href="shoppingCart.html">CART</a>
-
+            
             <a href="javascript:void(0);" class="icon" onclick="myNavFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -59,6 +61,7 @@
         </div>
     </div>
 
+    <div class="dividerUnderSection"></div>
 
     <!--Section 3: Contact Form-->
 
@@ -68,11 +71,11 @@
 
         <form action = "formsubmitted.html" name = "myForm" onsubmit = "return(validate());">
             <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" name="Name" placeholder="Your Name">
-            <input type="text" id="email" name = "Email" placeholder="Email" >
-            <input type="text" id="number" name = "Phone" placeholder="Phone No.">
+            <input class="placeholderText" type="text" id="name" name="Name" placeholder="Your Name">
+            <input class="placeholderText"  type="text" id="email" name = "Email" placeholder="Email" >
+            <input class="placeholderText" type="text" id="number" name = "Phone" placeholder="Phone No.">
             
-            <select name = "County">
+            <select name = "Province">
                 <option value = "-1" selected>[Choose your province]</option>
                 <option value = "1">Leinster</option>
                 <option value = "2">Munster</option>
@@ -82,7 +85,7 @@
 
             <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit" class="submitButton">SEND</button>
 
         </form>
 

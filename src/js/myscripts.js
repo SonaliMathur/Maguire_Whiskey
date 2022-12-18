@@ -1,6 +1,6 @@
+
 //Responsive navigation bar - becomes little icons when the screen width is reduced.
 //Use of Conditional statement in a Function (x1)
-//Is this a dynamic manipulation of the DOM?
 function myNavFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "allTopNav") {
@@ -10,11 +10,44 @@ function myNavFunction() {
     }
 }
 
+
+var countDownDate = new Date("Jan 20, 2023 15:37:25").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+
+
 //Event Handler (1)
 function tick(id) {
     document.getElementById(`button_${id}`).value = "ITEM ADDED";
     setTimeout(() => (document.getElementById(`button_${id}`).value = "+ QUICK ADD"), 2000);
 }
+
+// function removeTick() {
+//     document.getElementById(`button_${id}`).value = "- REMOVE";
+//     setTimeout(() => (document.getElementById(`button_${id}`).value = "REMOVED"), 2000);
+// }
+
+
+
 
 
 
@@ -29,7 +62,7 @@ function validate() {
         document.myForm.Name.focus();
         return false;
     }
-    if (document.myForm.Email.value == "" && atpos < 1 || (dotpos - atpos < 2)) {
+    if (document.myForm.Email.value == "" && atpos < 1 || (dotpos - atpos < 3)) {
         alert("Please enter correct email ID with an @ and a .");
         document.myForm.Email.focus();
         return false;
@@ -41,12 +74,15 @@ function validate() {
         document.myForm.Phone.focus();
         return false;
     }
-    if (document.myForm.County.value == "-1") {
-        alert("Please provide your county");
+    if (document.myForm.Province.value == "-1") {
+        alert("Please provide your province");
         return false;
     }
     return (true);
 }
+
+
+
 
 
 //Function with For Loop for slideshow(x1)
@@ -67,7 +103,7 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 3 seconds
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
 
@@ -82,28 +118,23 @@ btn.addEventListener('click', function onClick() {
 
 
 
-//Again, not done the best
-//won't even count this as an eveent handler
+//Event Handler
 function tickA() {
     document.getElementById("addButton").value = "ITEM ADDED";
     setTimeout(() => (document.getElementById("addButton").value = "ADD TO CART"), 2000);
 }
 
-// Shopping Cart logic
-class ShoppingCart {
-    constructor() {
-        this.items = [];
-    }
 
-    addItem(item) {
-        this.items.push(item);
-    }
 
-    removeItem(item) {
-        this.items.splice(this.items.indexOf(item), 1);
-    }
 
-    getItems() {
-        return this.items;
-    }
+//https://codepen.io/nadezda-g/pen/VwZOZJd
+window.onscroll = function () {
+    var theta = document.documentElement.scrollTop / -360 % Math.PI;
+
+    document.getElementById('rotationImg').style.transform = 'rotate(' + theta + 'rad)';
 }
+
+
+
+
+

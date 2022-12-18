@@ -26,6 +26,7 @@
         font-family: henderson-slab-basic, serif;
         opacity: 0.4;
         transition: opacity 3s;
+        background-color: #3F4A44;
     }
 
 
@@ -40,9 +41,10 @@
 
         <div class="topnav" id="myTopnav">
             <div class="topnavLogo" id="myTopnavlogo">
-                <a href="index.html" class="logo"><img class="myHomeLogo" src="../../Icons/HomeIcon.png" alt="Home Icon"
+                <a href="home.html" class="logo"><img class="myHomeLogo" src="../../Icons/HomeIcon.png" alt="Home Icon"
                         style="width:40px;"></a>
             </div>
+            <a href="about.html">ABOUT</a>
             <a href="shop.html">SHOP</a>
             <a href="contact.html">CONTACT</a>
             <a href="shoppingCart.html">CART</a>
@@ -56,18 +58,21 @@
 
     <!--Section 13: Title + Some description-->
     <div class="shopSection">
-        <h1>NEGRONI KIT</h1>
+        <h1>OLD FASHIONED KIT</h1>
         <div class="information">
-            <p>A Gin, vermouth and Campari make this sophisticated yet simple Italian classic.</p>
+            <p>A traditional whiskey cocktail with bitters, soda water and a simple orange garnish.</p>
  
         </div>
     </div>
+
+    <div class="dividerUnderSection"></div>
 
 
 
     <div class="categories">
         <div class="goBack"><a href="shop.html"><img src="../../Icons/backIcon.png" alt="back button" style="width:50px"></div></a>
         <div class="row">
+            <div class="card2">
             <div class="kits">
                 <img src="../../Products/ItemA.png" alt="cocktail image">
             </div>
@@ -77,21 +82,69 @@
             </div>
         </div>
     </div>
+    </div>
 
 
 
     <div class="allergens">
         <div class="allergenContainer">
-            <img class=allergyIcon src="../../Icons/SulphitesIcon.png" alt="Allergy Icon" style="height:70px;" />
+            <img class=allergyIcon src="../../Icons/SulphitesIcon.png" alt="Allergy Icon" style="height:60px;" />
             <p class="allergyText">May contain suphites</p>
         </div>
+        <div class="allergenContainer">
+            <img class=allergyIcon src="../../Icons/GlutenIcon.png" alt="Allergy Icon" style="height:70px;" />
+            <p class="allergyText">Traces of gluten</p>
+        </div>
+    </div>
 
 
+ <div class="buttonModal">
+        <button class="modalButton" id="openModalButton"><img class=scaleIcon src="../../Icons/ScaleIcon.png" alt="Scale Icon" style="height:27px;""></button>
+        </div>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+        
+            <h2 class="unitConversion">Unit Conversion</h2>
+        
+            <div class="inputContainer">
+              <label for="ml">Milliliters</label>
+              <input type="number" name="" id="ml" oninput="convertToOthers('ml', this.value)">
+            </div>
+          
+            <div class="inputContainer">
+                <label for="liter">Liters</label><input type="number" name="" id="liter" oninput="convertToOthers('liter', this.value)">
+            </div>
+        
+        
+            <div class="inputContainer">
+                <label for="oz">Ounces</label><input type="number" name="" id="oz" oninput="convertToOthers('oz', this.value)">
+            </div>
+        
+        
+            <div class="inputContainer">
+                <label for="cup">Cups</label><input type="number" name="" id="cup" oninput="convertToOthers('cup', this.value)">
+            </div>
+        
+        
+            <div class="inputContainer">
+                <label for="tbsp">Tablespoon</label><input type="number" name="" id="tbsp" oninput="convertToOthers('tbsp', this.value)">
+            </div>
+        
+            <div class="inputContainer">
+                <label for="tsp">Teaspoon</label><input type="number" name="" id="tsp" oninput="convertToOthers('tsp', this.value)">
+        
+            </div>
+        
+          </div>
+        </div>
     </div>
 
     <div class="recipeButtonDesign">
-        <input type="button" class="recipeButton" onclick="insertRecipe()" value="VIEW RECIPE" />
+        <input type="button" id="recipeButton" class="recipeButton" onclick="insertRecipe()" value="VIEW RECIPE" />
     </div>
+
     <!--Table-->
     <div class="tableDesign">
         <table id="myTable" style="width:100%">
@@ -108,7 +161,8 @@
         </table>
     </div>
         
-
+  
+    
     <!--Section 12: Orange Divider-->
     <div class="divider">
     </div>
@@ -130,6 +184,8 @@
             <a href="https://twitter.com/"><img class="twitter" src="../../Icons/Twitter.png" alt="Twitter Icon" style="height:20px;" /></a>
         </div>
     </div>
+
+    <script src="../js/conversion.js"></script>
 </body>
 
 </html>
